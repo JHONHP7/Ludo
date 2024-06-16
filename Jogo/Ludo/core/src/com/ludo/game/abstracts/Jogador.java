@@ -1,7 +1,7 @@
 package com.ludo.game.abstracts;
 
 import com.ludo.game.entities.Peao;
-import com.ludo.game.entities.Dados;
+import com.ludo.game.entities.Dado;
 import com.ludo.game.enums.Cor;
 
  public abstract class Jogador {
@@ -9,15 +9,15 @@ import com.ludo.game.enums.Cor;
 	protected Cor cor;
 	protected int CasaInicial;
 
-	abstract int lancaDado(Dados dado);
+	protected abstract int lancaDado(Dado dado);
 
-	abstract int selecionaPeao();
+	protected abstract int selecionaPeao();
 
 	public Peao[] getPeoes() {
 		return this.peoes;
 	}
 
-	protected void movePeao(Peao peao, int qtdCasas, Dados dado) {
+	protected void movePeao(Peao peao, int qtdCasas, Dado dado) {
 		int passos = this.lancaDado(dado);
 		int peaoIdx = selecionaPeao();
 		// peoes[peaoIdx]
