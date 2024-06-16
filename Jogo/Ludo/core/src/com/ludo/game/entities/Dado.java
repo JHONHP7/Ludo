@@ -1,8 +1,6 @@
 package com.ludo.game.entities;
 
-import java.util.Random; 
-
-public class Dados {
+public class Dado {
     private int valor;
 
     public int lancaDado() { 
